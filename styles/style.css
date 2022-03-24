@@ -1,0 +1,49 @@
+body{
+  display: flex;
+  background-color:aqua;
+  justify-content:flex-start;
+}
+.mytabs{
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width:fit-content;
+  margin: 10px;
+  padding: 10px;
+}
+.mytabs.tab.birds{
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,300px));
+
+}
+img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.mytabs input[type = "radio"]{
+  display: none ;
+}
+.mytabs label{
+  padding: 25px;
+  background: beige;
+}
+.mytabs .tab{
+  width: 100%;
+  padding: 20px;
+  background :yellow;
+  order: 1;
+  display: none;
+}
+.mytabs.tab h2{
+  font-size: 3em;
+}
+.mytabs input[type = 'radio']:checked+label+.tab{ 
+display: block;
+}
+.mytabs input[type = "radio"] :checked+label{
+  display: block;
+  background: #fff;
+}
